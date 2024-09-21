@@ -1,9 +1,43 @@
+:root,
+:root[data-theme="dark"] {
+    /* --cor-texto-primario: #fff; */
+    --primary-color: #fff; /* texto */
+    --primary-bg: #000; /* bg = background */
+    --hover-menu: #1818;
+    --icon-color: rgba(15, 103, 219, 0.533);
+}
+:root[data-theme="light"] {
+  --cor-texto-primario: #000 ;
+  --primary-bg: #fff;
+  
+}
 body {
-  background: #818181;
+  background: var(--primary-bg); /* cor de fundo */
+  color: var(--primary-color) ; /*  cor do texto */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a{
+   text-decoration: none;
+   color: var(--primary-color);
 
 }
 
-/* img {
-    width: 10rem;
-    height: 10rem;
-} */
+a:hover {
+  color: var(--hover-menu);
+}
+
+i{
+  color: var(--icon-color)
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+img{
+  width: 10rem; /* largura */
+  height: 10rem; /* altura */
+}
