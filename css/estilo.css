@@ -3,7 +3,7 @@
     --primary-color: #fff; /* cor do texto para o tema escuro */
     --primary-bg: hsl(0, 0%, 0%); /* cor de fundo para o tema escuro */
     --hover-menu: #6b6565; /* cor do menu ao passar o mouse */
-    --icon-color: #549659; /* cor dos ícones */
+    --icon-color: #7b5ac7; /* cor dos ícones */
     --icon-tema: #cfb12a;
 }
 
@@ -37,6 +37,7 @@ i {
     margin: 0; /* remove margens de todos os elementos */
     padding: 0; /* remove preenchimentos de todos os elementos */
     box-sizing: border-box; /* inclui bordas e preenchimentos no tamanho total do elemento */
+    list-style: none;
 }
 /* Fim do reset */
 
@@ -77,6 +78,15 @@ i {
   gap: 1rem;
 }
 
+.menu-item {
+    width: 100%;
+}
+
+/* .menu-link {
+    display: flex;
+    align-items: ;
+}
+ */
 /* .header-nav {
   display: none;
 } */
