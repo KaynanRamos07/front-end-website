@@ -2,7 +2,7 @@
 :root[data-theme="dark"] {
     --primary-color: #fff; /* cor do texto para o tema escuro */
     --primary-bg: hsl(0, 0%, 0%); /* cor de fundo para o tema escuro */
-    --hover-menu: #6b6565; /* cor do menu ao passar o mouse */
+    --hover-menu: #684d4d; /* cor do menu ao passar o mouse */
     --icon-color: #7b5ac7; /* cor dos ícones */
     --icon-tema: #cfb12a;
 }
