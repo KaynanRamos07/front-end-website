@@ -4,19 +4,26 @@
     --primary-bg: hsl(0, 0%, 0%); /* cor de fundo para o tema escuro */
     --hover-menu: #684d4d; /* cor do menu ao passar o mouse */
     --icon-color: #7b5ac7; /* cor dos ícones */
-    --icon-tema: #cfb12a;
+    --icon-tema: #cfb12a; /* cor do ícone para alternar tema */
+    --menu-texto: #ebebeb; /* cor do texto do menu no tema escuro */
 }
 
 :root[data-theme="light"] {
     --cor-texto-primario: #000; /* cor do texto para o tema claro */
     --primary-bg: #fff; /* cor de fundo para o tema claro */
-    --primary-color: #000; /* cor do texto para o tema claro */
+    --primary-color: #000; /* cor primária do texto no tema claro */
+    --menu-texto: #000; /* cor do texto do menu no tema claro */
 }
 
 body {
     background: var(--primary-bg); /* define a cor de fundo do body */
     color: var(--primary-color); /* define a cor do texto */
     font-family: Verdana, Geneva, Tahoma, sans-serif; /* fontes utilizadas para o texto */
+    font-size: 22px; /* tamanho da fonte padrão */
+}
+
+html[data-theme="light"] .logo {
+    filter: invert(1); /* inverte as cores da logo no tema claro */
 }
 
 a {
@@ -32,12 +39,37 @@ i {
     color: var(--icon-color); /* define a cor dos ícones */
 }
 
+b {
+    font-weight: 600; /* define o peso da fonte em negrito */
+}
+
+h1 {
+    font-size: 2.5rem; /* tamanho da fonte para h1 */
+    font-weight: 200; /* peso da fonte para h1 */
+}
+
+h2 {
+    /* Estilo para h2 (a ser definido) */
+}
+
+h3 {
+    /* Estilo para h3 (a ser definido) */
+}
+
+p, span, li {
+    font-size: 1rem; /* tamanho da fonte padrão para parágrafos, spans e listas */
+}
+
+p {
+    text-align: justify; /* alinha o texto de parágrafos justificado */
+}
+
 /* Reset CSS para remover margens e preenchimentos padrão */
 * {
     margin: 0; /* remove margens de todos os elementos */
     padding: 0; /* remove preenchimentos de todos os elementos */
     box-sizing: border-box; /* inclui bordas e preenchimentos no tamanho total do elemento */
-    list-style: none;
+    list-style: none; /* remove marcadores de listas */
 }
 /* Fim do reset */
 
@@ -50,6 +82,7 @@ i {
     width: 100%; /* largura total do contêiner */
     padding: 0.5rem 1rem; /* espaçamento interno do header */
     z-index: 2; /* define a ordem de empilhamento do header */
+    background: var(--primary-bg); /* cor de fundo do header */
 }
 
 /* Estilo para a logo */
@@ -71,53 +104,145 @@ i {
     cursor: pointer; /* muda o cursor para indicar que é clicável */
 }
 
+/* Estilo do menu principal */
 .menu { /* UL */
-  display: flex;
-  align-items: center;
-  background: var(--primary-bg);
-  gap: 1rem;
+    display: flex; /* ativa o modo flexível */
+    align-items: center; /* alinha itens verticalmente no centro */
+    background: var(--primary-bg); /* cor de fundo do menu */
+    gap: 1rem; /* espaço entre os itens do menu */
 }
 
 .menu-item {
-    width: 100%;
+    width: 100%; /* cada item do menu ocupa a largura total */
 }
 
-/* .menu-link {
-    display: flex;
-    align-items: ;
-}
- */
+/* Navegação do header */
 .header-nav {
-  display: none;
+    display: none; /* esconde a navegação do header por padrão */
 }
 
-/*  Menu Mobile */
-
-.menu-mobile{
-    width: 100vw;  /* VW = View Width */
-    position: fixed;
-    bottom: 0;
-    justify-content: space-between;
-    border-top: 1px solid #6b6565;
+/* Menu Mobile */
+.menu-mobile {
+    width: 100vw; /* largura da viewport */
+    position: fixed; /* fixa o menu na parte inferior */
+    bottom: 0; /* posiciona na parte inferior */
+    justify-content: space-between; /* distribui itens com espaço entre eles */
+    border-top: 1px solid #6b6565; /* borda superior do menu mobile */
 }
 
 .menu-mobile .menu-link {
-    flex-direction: column;
-    justify-content: center;
-    padding: 0.5rem 1rem;
+    flex-direction: column; /* orienta links em coluna */
+    justify-content: center; /* centraliza links verticalmente */
+    padding: 0.5rem 1rem; /* espaçamento interno dos links */
 }
 
-/* Responsividade / Responsivo */
- @media (min-width: 768px) {
+/* Efeitos de hover e ativo para links do menu */
+.menu-link.active .menu-icon,
+.menu-link.active .menu-text,
+.menu-link:hover .menu-icon,
+.menu-link:hover .menu-text {
+    color: #6657b1; /* cor de link ao estar ativo ou ao passar o mouse */
+}
+
+/* Estilo dos ícones e texto do menu */
+.menu-icon, .menu-text {
+    font-weight: 600; /* peso da fonte dos ícones e texto */
+}
+
+.menu-icon {
+    font-size: 1.5rem; /* tamanho dos ícones */
+}
+
+.menu-text {
+    font-size: .75rem; /* tamanho da fonte do texto do menu */
+    text-transform: uppercase; /* transforma o texto em maiúsculas */
+}
+
+/* Estilo para grupos de menus */
+.menu-principal {
+    gap: 3rem; /* espaço entre os itens do menu principal */
+}
+
+.menu-social {
+    gap: 2rem; /* espaço entre os itens do menu social */
+}
+
+/* Estilo dos ícones do menu social */
+.menu-social .menu-icon {
+    color: #71a2e2; /* cor dos ícones sociais */
+}
+
+.menu-social .menu-icon:hover {
+    color: #483c85; /* cor dos ícones sociais ao passar o mouse */
+}
+
+/* Estilo dos botões */
+.btn {
+    display: flex; /* ativa o modo flexível */
+    justify-content: center; /* centraliza o conteúdo */
+    align-items: center; /* alinha itens verticalmente no centro */
+    gap: 1rem; /* espaço entre os itens do botão */
+    width: 100%; /* largura total do botão */
+    background: transparent; /* fundo transparente */
+    border-radius: 3rem; /* bordas arredondadas */
+    color: var(--primary-color); /* cor do texto do botão */
+    border: none; /* remove a borda padrão */
+    padding: .5rem 1.5rem; /* espaçamento interno do botão */
+    cursor: pointer; /* muda o cursor para indicar que é clicável */
+}
+
+.btn:hover {
+    transform: scale(1.05); /* aumenta levemente o botão ao passar o mouse */
+    transition: ease-in-out .5s; /* animação suave para o efeito de hover */
+}
+
+.btn span, .btn i {
+    font-size: 1.5rem; /* tamanho da fonte para texto e ícones no botão */
+    text-transform: uppercase; /* transforma o texto em maiúsculas */
+}
+
+.btn-primary span {
+    color: var(--primary-color); /* cor do texto do botão primário */
+}
+
+.btn-primary {
+    border: 5px solid var(--hover-menu); /* borda para o botão primário */
+}
+
+/* Estilos para a seção principal */
+#home {
+    display: flex; /* ativa o modo flexível */
+    flex-direction: column; /* disposição em coluna */
+    gap: 4rem; /* espaço entre os elementos da seção */
+}
+
+.main-content {
+    display: flex; /* ativa o modo flexível */
+    flex-direction: column; /* disposição em coluna */
+    gap: 1.5rem; /* espaço entre os elementos do conteúdo principal */
+}
+
+.video iframe {
+    width: 100%; /* largura total do iframe */
+    aspect-ratio: 16/9; /* mantém a proporção do vídeo */
+}
+
+#home, .projetos, .sobre, .contato {
+    padding: 2.5rem 1rem; /* espaçamento interno das seções */
+}
+
+/* Responsividade / Estilos para telas maiores */
+@media (min-width: 768px) {
     #header {
-        position: fixed;
-        padding: 1rem 6rem;
+        position: fixed; /* fixa o header no topo da tela */
+        padding: 1rem 6rem; /* espaçamento interno do header */
     }
     .nav-mobile {
-        display: none;
+        display: none; /* esconde a navegação mobile em telas maiores */
     }
-    .header-nav{
-        display: flex;
+    .header-nav {
+        display: flex; /* exibe a navegação do header em telas maiores */
     }
-    
- }
+    .header-nav,
+    .header-toggle {
+        min-width: 30%; /* largura
