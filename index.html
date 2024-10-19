@@ -1,364 +1,349 @@
 <!DOCTYPE html>
 <html lang="pt-br" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaynan Ramos | Meu Website</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Kyanan Ramos | Meu Website</title>
+    <!--  Estilo CSS -->
+    <link rel="stylesheet" href="css/estilo.css" />
 
-  <!--  Estilo CSS -->
-  <link rel="stylesheet" href="css/estilo.css" />
+    <!-- Bootstrap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
-  <!-- Bootstrap icon -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- AOS CSS -->
 
-  <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Oxanium:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-  <header id="header">
-    <nav class="header-nav">
-      <!-- menu ou navegation (shift+alt+a=comentário) -->
-      <!--  menu desktop -->
-      <ul class="menu menu-principal">
+  <body>
+    <header id="header">
+      <nav class="header-nav">
+        <!-- menu ou navegation (shift+alt+a=comentário) -->
+        <!--  menu desktop -->
+        <ul class="menu menu-principal">
+          <li class="menu-item">
+            <a href="" class="menu-link" active>
+              <span class="menu-text"> Home </span>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a href="#projetos" class="menu-link">
+              <span class="menu-text"> Projetos </span>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a href="#sobre" class="menu-link">
+              <span class="menu-text"> Sobre </span>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a href="#contato" class="menu-link">
+              <span class="menu-text"> Contato </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- logo -->
+      <div class="header-logo">
+        <a href="#home">
+          <img class="logo" src="img/Vector2.png" alt="" />
+        </a>
+      </div>
+
+      <div class="header-toggle">
+        <i id="toggleTheme" class="bi bi-sun"> </i>
+        <!-- sol -->
+      </div>
+    </header>
+    <!-- fim header -->
+
+    <!-- Menu Mobile -->
+    <nav class="nav-mobile">
+      <ul class="menu menu-mobile">
         <li class="menu-item">
-          <a href="" class="menu-link" active>
+          <a href="#home" class="menu-link active">
+            <i class="menu-icon bi bi-house-door"> </i>
             <span class="menu-text"> Home </span>
           </a>
         </li>
 
         <li class="menu-item">
           <a href="#projetos" class="menu-link">
+            <i class="menu-icon bi bi-house-door"> </i>
             <span class="menu-text"> Projetos </span>
           </a>
         </li>
 
         <li class="menu-item">
           <a href="#sobre" class="menu-link">
+            <i class="menu-icon bi bi-house-door"> </i>
             <span class="menu-text"> Sobre </span>
           </a>
         </li>
 
         <li class="menu-item">
           <a href="#contato" class="menu-link">
+            <i class="menu-icon bi bi-whatsapp"> </i>
             <span class="menu-text"> Contato </span>
           </a>
         </li>
       </ul>
     </nav>
 
-    <!-- logo -->
-    <div class="header-logo">
-      <a href="#home">
-        <img class="logo" src="img/logo.png" alt="" />
-      </a>
-    </div>
+    <main id="home">
+      <div class="main-content">
+        <h1><b>Soluções Criativas &</b> Desenvolvimento Front-End</h1>
 
-    <div class="header-toggle">
-      <i id="toggleTheme" class="bi bi-sun"> </i>
-      <!-- sol -->
-    </div>
-  </header>
-  <!-- fim header -->
+        <p>Kaynan Ramos, Carapicuiba - SP , Desenvolvedor</p>
 
-  <!-- Menu Mobile -->
-  <nav class="nav-mobile">
-    <ul class="menu menu-mobile">
+        <ul class="menu menu-social">
+          <li>
+            <a
+              class="menu-link"
+              href="https://github.com/WesleySilva373"
+              target="_blank"
+            >
+              <i class="menu-icon bi bi-github"></i>
+            </a>
+            <!-- Tag <a> estava sem fechamento -->
+          </li>
 
-      <li class="menu-item">
-        <a href="#home" class="menu-link active">
-          <i class=" menu-icon bi bi-house-door"> </i>
-          <span class="menu-text"> Home </span>
+          <li>
+            <a
+              class="menu-link"
+              href="https://www.instagram.com/wesley.tenorio1/"
+              target="_blank"
+            >
+              <i class="menu-icon bi bi-instagram"></i>
+            </a>
+            <!-- Tag <a> estava sem fechamento -->
+          </li>
+
+          <li>
+            <a
+              class="menu-link"
+              href="https://www.facebook.com/wesley.tenorio.712/"
+              target="_blank"
+            >
+              <i class="menu-icon bi bi-facebook"></i>
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="menu-link"
+              href="https://wa.me/+5511989334975"
+              target="_blank"
+            >
+              <i class="menu-icon bi bi-whatsapp"></i>
+            </a>
+            <!-- Tag <a> estava sem fechamento -->
+          </li>
+        </ul>
+
+        <a href="#projetos">
+          <button class="btn btn-primary">
+            <span> Ver Projetos</span>
+            <i class="bi bi-arrow-down-right"></i>
+          </button>
         </a>
-      </li>
 
-      <li class="menu-item">
-        <a href="#projetos" class="menu-link ">
-          <i class="menu-icon bi bi-house-door"> </i>
-          <span class="menu-text"> Projetos </span>
-        </a>
-      </li>
-
-      <li class="menu-item">
-        <a href="#sobre" class="menu-link">
-          <i class="menu-icon bi bi-house-door"> </i>
-          <span class="menu-text"> Sobre </span>
-        </a>
-      </li>
-
-      <li class="menu-item">
-        <a href="#contato" class="menu-link ">
-          <i class="menu-icon bi bi-whatsapp"> </i>
-          <span class="menu-text"> Contato </span>
-        </a>
-      </li>
-
-    </ul>
-  </nav>
-
-  <main id="home">
-    <div class="main-content">
-
-      <h1> <b>Soluções Criativas &</b> Desenvolvimento Front-End </h1>
-
-      <p> Kaynan Ramos, Carapicuiba - SP , Desenvolvedor</p>
-
-      <ul class="menu menu-social">
-
-        <li>
-          <a class="menu-link" href="https://github.com/WesleySilva373" target="_blank">
-            <i class="menu-icon bi bi-github"></i>
-          </a> <!-- Tag <a> estava sem fechamento -->
-        </li>
-
-        <li>
-          <a class="menu-link" href="https://www.instagram.com/wesley.tenorio1/" target="_blank">
-            <i class="menu-icon bi bi-instagram"></i>
-          </a> <!-- Tag <a> estava sem fechamento -->
-        </li>
-
-        <li>
-          <a class="menu-link" href="https://www.facebook.com/wesley.tenorio.712/" target="_blank">
-            <i class="menu-icon bi bi-facebook"></i>
-          </a>
-        </li>
-
-
-
-
-        <li>
-          <a class="menu-link" href="https://wa.me/+5511989334975" target="_blank">
-            <i class="menu-icon bi bi-whatsapp"></i>
-          </a> <!-- Tag <a> estava sem fechamento -->
-        </li>
-
-
-      </ul>
-
-      <a href="#projetos">
-        <button class="btn btn-primary">
-          <span> Ver Projetos</span>
-          <i class="bi bi-arrow-down-right"></i>
-        </button>
-      </a>
-
-      <div class="video">
-        <iframe src="https://www.youtube.com/embed/Ejkb_YpuHWs?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n"
-          title="Começa aqui o novo @CursoemVideo de HTML5 e CSS3" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/Ejkb_YpuHWs?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n"
+            title="Começa aqui o novo @CursoemVideo de HTML5 e CSS3"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
+    </main>
 
-    </div>
-  </main>
+    <section id="projetos" class="projetos">
+      <h2 data-aos="fade-down-left">Projetos</h2>
 
+      <div class="projetos-container" data-aos="fade-up" data-aos-delay="100">
+        <div class="projeto-card">
+          <img src="img/projects/games-store.jpg" alt="" class="card-cover" />
 
-  <section id="projetos" class="projetos">
+          <div class="card-body">
+            <h3 class="card-title">Ramos store games</h3>
 
-    <h2 data-aos="fade-down-left">Projetos</h2>
+            <p class="card-descricao">Loja Online De Games</p>
 
-    <div class="projetos-container" data-aos="fade-up" data-aos-delay="100">
+            <ul class="card-list">
+              <li class="card-item">jogos de nintendo</li>
 
-      
-      <div class="projeto-card">
+              <li class="card-item">jogos de xbox</li>
 
-        <img src="img/projects/games-store.jpg" alt="" class="card-cover">
+              <li class="card-item">jogos ps5</li>
+            </ul>
 
-        <div class="card-body">
+            <div class="card-button">
+              <button class="btn btn-primary">
+                <a
+                  href="https://store.steampowered.com/?l=portuguese"
+                  target="_blank"
+                >
+                  <span>Ver Loja</span>
+                  <i class="bi bi-arrow-down-right"></i>
+                </a>
+              </button>
 
-          <h3 class="card-title"> Ramos store games</h3>
-
-          <p class="card-descricao"> Loja Online De Games</p>
-
-          <ul class="card-list">
-
-            <li class="card-item">
-              jogos de nintendo
-            </li>
-
-            <li class="card-item">
-              jogos de xbox
-            </li>
-
-            <li class="card-item">
-              jogos ps5
-            </li>
-
-          </ul>
-
-          <div class="card-button">
-
-            <button class="btn btn-primary">
-
-              <a href="https://store.steampowered.com/?l=portuguese" target="_blank">
-                <span>Ver Loja</span>
-                <i class="bi bi-arrow-down-right"></i>
-              </a>
-            </button>
-
-
-
-
-            <button class="btn">
-
-              <a href="https://github.com/WesleySilva373/front" target="_blank">
-                <span>Repositorio</span>
-                <i class="bi bi-arrow-down-right"></i>
-              </a>
-            </button>
-
-
-
+              <button class="btn">
+                <a
+                  href="https://github.com/WesleySilva373/front"
+                  target="_blank"
+                >
+                  <span>Repositorio</span>
+                  <i class="bi bi-arrow-down-right"></i>
+                </a>
+              </button>
+            </div>
           </div>
+          <!--  fim card-bodyh -->
+        </div>
+        <!-- fim proj1 -->
 
-        </div> <!--  fim card-bodyh -->
+        <div class="projeto-card card-reverse">
+          <img src="img/projects/josisbox.jpg" alt="" class="card-cover" />
 
-      </div> <!-- fim proj1 -->
+          <div class="card-body">
+            <h3 class="card-title">Ramos store games</h3>
 
+            <p class="card-descricao">Loja Online De Livros</p>
 
-      <div class="projeto-card card-reverse">
+            <ul class="card-list">
+              <li class="card-item">Harry Potter</li>
 
-        <img src="img/projects/josisbox.jpg" alt="" class="card-cover">
+              <li class="card-item">A casa Do Dragão</li>
 
-        <div class="card-body">
+              <li class="card-item">Os Aneis Do Poder</li>
+            </ul>
 
-          <h3 class="card-title"> Ramos store games</h3>
+            <div class="card-button">
+              <button class="btn btn-primary">
+                <a
+                  href="https://www.amazon.com.br/s?k=ficcao+livros&crid=1PAVKAJX94IOJ&sprefix=ficc%2Caps%2C417&ref=nb_sb_ss_ts-doa-p_5_4"
+                  target="_blank"
+                >
+                  <span>Ver Catalogo</span>
+                  <i class="bi bi-arrow-down-right"></i>
+                </a>
+              </button>
 
-          <p class="card-descricao"> Loja Online De Livros</p>
-
-          <ul class="card-list">
-
-            <li class="card-item">
-              Harry Potter
-            </li>
-
-            <li class="card-item">
-              A casa Do Dragão
-            </li>
-
-            <li class="card-item">
-             Os Aneis Do Poder
-            </li>
-
-          </ul>
-
-          <div class="card-button">
-
-            <button class="btn btn-primary">
-
-              <a href="https://www.amazon.com.br/s?k=ficcao+livros&crid=1PAVKAJX94IOJ&sprefix=ficc%2Caps%2C417&ref=nb_sb_ss_ts-doa-p_5_4" target="_blank">
-                <span>Ver Catalogo</span>
-                <i class="bi bi-arrow-down-right"></i>
-              </a>
-            </button>
-
-
-
-
-            <button class="btn">
-
-              <a href="https://github.com/WesleySilva373/front" target="_blank">
-                <span>Repositorio</span>
-                <i class="bi bi-arrow-down-right"></i>
-              </a>
-            </button>
-
-
-
+              <button class="btn">
+                <a
+                  href="https://github.com/WesleySilva373/front"
+                  target="_blank"
+                >
+                  <span>Repositorio</span>
+                  <i class="bi bi-arrow-down-right"></i>
+                </a>
+              </button>
+            </div>
           </div>
+          <!--  fim card-bodyh -->
+        </div>
+        <!-- fim proj2 -->
 
-        </div> <!--  fim card-bodyh -->
+        <div class="projeto-card">
+          <img src="img/projects/portfolio.PNG" alt="" class="card-cover" />
 
-      </div> <!-- fim proj2 -->
+          <div class="card-body">
+            <h3 class="card-title">Ramos store games</h3>
 
+            <p class="card-descricao">Loja Online De Games</p>
 
+            <ul class="card-list">
+              <li class="card-item">jogos de nintendo</li>
 
+              <li class="card-item">jogos de xbox</li>
 
+              <li class="card-item">jogos ps5</li>
+            </ul>
 
-      <div class="projeto-card">
+            <div class="card-button">
+              <button class="btn btn-primary">
+                <a
+                  href="https://store.steampowered.com/?l=portuguese"
+                  target="_blank"
+                >
+                  <span>Ver Loja</span>
+                  <i class="bi bi-arrow-down-right"></i>
+                </a>
+              </button>
 
-        <img src="img/projects/portfolio.PNG" alt="" class="card-cover">
-
-        <div class="card-body">
-
-          <h3 class="card-title"> Ramos store games</h3>
-
-          <p class="card-descricao"> Loja Online De Games</p>
-
-          <ul class="card-list">
-
-            <li class="card-item">
-              jogos de nintendo
-            </li>
-
-            <li class="card-item">
-              jogos de xbox
-            </li>
-
-            <li class="card-item">
-              jogos ps5
-            </li>
-
-          </ul>
-
-          <div class="card-button">
-
-            <button class="btn btn-primary">
-
-              <a href="https://store.steampowered.com/?l=portuguese" target="_blank">
-                <span>Ver Loja</span>
-                <i class="bi bi-arrow-down-right"></i>
-              </a>
-            </button>
-
-
-
-
-            <button class="btn">
-
-              <a href="https://github.com/WesleySilva373/front" target="_blank">
-                <span>Repositorio</span>
-                <i class="bi bi-arrow-down-right"></i>
-              </a>
-            </button>
-
-
-
+              <button class="btn">
+                <a
+                  href="https://github.com/WesleySilva373/front"
+                  target="_blank"
+                >
+                  <span>Repositorio</span>
+                  <i class="bi bi-arrow-down-right"></i>
+                </a>
+              </button>
+            </div>
           </div>
+          <!--  fim card-bodyh -->
+        </div>
+        <!-- fim proj3 -->
+      </div>
+      <!-- fim projeto container -->
+    </section>
 
-        </div> <!--  fim card-bodyh -->
+    <section id="sobre" class="sobre">
+      <img class="sobre-logo" src="img/Designer.jpeg" alt="" />
+      <div class="sobre-descricao">
+        <h2>Sobre Mim</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+          numquam architecto cupiditate. Obcaecati asperiores, numquam pariatur
+          sed commodi deleniti! Illum, repudiandae. Ab voluptates sit impedit at
+          odio, eveniet reiciendis dignissimos.
+        </p>
+        <div class="sobre-icones">
+          <i class="bi bi-translate"></i>
+          <span> Inglês: Intermediário </span>
+        </div>
+        <div class="descricao-button">
+          <a href="http://wa.me/+5511988236270" target="_blank">
+            <button class="btn btn-primary">
+              <span>Conecte-se comigo</span>
+            </button>
+          </a>
+        </div>
+      </div>
+      <!-- fim descricao -->
+    </section>
 
-      </div> <!-- fim proj3 -->
+    <section id="contato" class="contato">
+      <h2>Contato</h2>
+    </section>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-
-    </div> <!-- fim projeto container -->
-  </section>
-
-
-
-  <section id="sobre" class="sobre">
-    <h2>Sobre Mim</h2>
-
-  </section>
-
-
-
-  <section id="contato" class="contato">
-    <h2>Contato</h2>
-
-  </section>
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <script src="./js/script.js"> </script>
-
- 
-
-</body>
-
+    <script src="./js/script.js"></script>
+  </body>
 </html>
-
-
