@@ -341,7 +341,20 @@ p {
 }
 
 
+.sobre{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
 
+.sobre-logo{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    border-radius: 50rem;
+    border: 8px solid var(--primary-color);
+}
 
 
 /* Responsividade Responsivo */
