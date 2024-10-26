@@ -10,6 +10,8 @@
     --hover-social: #169adc;
 
     --cor-titulo: #c042eb;
+    --titulo-accordion:#ececec;
+    --body-accordion:#1f1f1f;;
 }
 
 :root[data-theme="light"] {
@@ -20,6 +22,9 @@
     --hover-social:#169adc;
 
     --cor-titulo: #1d1d1d;
+
+    --titulo-accordion:#1f1f1f;
+    --body-accordion:#ececec;
 }
 
 /* CSS Geral */
@@ -61,7 +66,7 @@ h2 {
     font-family: "Caveat", cursive;
 }
 
-h3 {
+h3 {   
 
 }
 
@@ -356,6 +361,86 @@ p {
     border: 8px solid var(--primary-color);
 }
 
+.sobre-conteudo1, 
+.sobre-conteudo2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.sobre-descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+.sobre-icones {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.sobre-icones i {
+    font-size: 1.25rem;
+    color: #169adc;
+}
+
+.sobre-conteudo2 .col1, 
+.sobre-conteudo2 .col2 {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    gap: 2rem;
+}
+
+.sobre-conteudo2 .col1 .row1,
+.sobre-conteudo2 .col1 .row2 {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    padding: 0.75rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+
+.accordion-header span {
+    color: var(--titulo-accordion);
+}
+/* Esconder as respostas */
+.accordion-body {
+    display: none;
+    padding: 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .625rem;
+    border: 1px solid var(--primary-color);
+}
+
+.accordion-item.active .accordion-header {
+    background: var(--body-accordion);
+}
+/* conteudo aparece após o click */
+.accordion-item.active .accordion-body {
+    display: flex;  
+}
+.accordion-item.active .bi-caret-down-fill {
+    transform: rotate(180deg);
+}
+
+
 
 /* Responsividade Responsivo */
 
@@ -400,8 +485,19 @@ p {
     .card-cover {
         width: 55%;
     }
-        
-}
+    .sobre{
+        gap: 5rem;
+    }
+    .sobre-conteudo1, 
+    .sobre-conteudo2 {
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+    
+
+
+
+}/* fim 992px */
 
 @media (min-width: 1200px) {
 
